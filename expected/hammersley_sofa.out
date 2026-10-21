@@ -1,0 +1,8 @@
+body area (grid h=0.01) = 2.20750; exact pi/2 + 2/pi = 2.20742
+motion stays in K for all 2001 sampled phi (cell centres): True;  max y over the turn = 3.2650
+at phi=0 body x-range [-2.268,0.992], y-range [0.005,0.995] (in the entry arm + corner cube; slides in from x=-inf)
+tau_4.5: occurs in the final +y translation (M <= 3.265 < 4.5 during the turn), body all in y > 1 there -> case (i), mu(tau) = 1 >= 1/sqrt2
+t*: phi = pi/4, mu = 0.707107; M(t*) = 2.5981 <= c; min y = 0.0030
+all cells in SX u Stub(c) at t*: True;  area split: SX 1.0383, Stub 1.1692
+all cells in T(t*): True
+vol B = 2.2075 <= vol(T n SX) + vol(T n Stub) = 1.2822 + 1.4142 = 2.6964 <= vol(T n X_w) + vol(T n Y_w) = 1.4142 + 1.4142 = 2.8284 <= 2 sqrt2 = 2.8284

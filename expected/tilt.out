@@ -1,0 +1,5 @@
+u = 2.20000000: grid min mu = 0.416677; refined min mu = 0.4152046784; mu*(u) = 0.4152046784; refined - mu* = -5.85e-13; at phi = -2.3562, roll = 0.3919
+u = 2.60000000: grid min mu = 0.544639; refined min mu = 0.5433789954; mu*(u) = 0.5433789954; refined - mu* = -4.57e-13; at phi = -2.3562, roll = 0.2877
+u = 3.41421356: grid min mu = 0.708648; refined min mu = 0.7071067812; mu*(u) = 0.7071067812; refined - mu* = -2.93e-13; at phi = -2.3562, roll = 0.1699
+u = 3.50000000: grid min mu = 0.722364; refined min mu = 0.7192982456; mu*(u) = 0.7192982456; refined - mu* = -2.81e-13; at phi = -2.3562, roll = 0.1618
+u = 3.90000000: grid min mu = 0.770235; refined min mu = 0.7675769901; mu*(u) = 0.7675769901; refined - mu* = -2.32e-13; at phi = -2.3562, roll = 0.1307

@@ -1,0 +1,9 @@
+(1a) f < 1 on [1e-3, pi/4] by 20000 interval cells: True
+(1b) 1/3 - x/2 - x^2/18 at x = 1e-3 is positive: True
+(2) mu*(2+sqrt2) - 1/sqrt2 = [+/- 5.80e-36] (exact identity shown in comments)
+(3) Gamma(3) = [2.8677910 +/- 3.61e-9] < 2.868: True
+(3) Gamma(2.61) = [3.0249344 +/- 8.91e-9] < 3.025: True
+(3) Gamma(2.3) = [3.3364160 +/- 4.41e-10] < 3.337: True
+(3) Gamma(2.26) = [3.3990767 +/- 1.51e-8] < 3.4083: True
+(3) Gamma(2) = [4.0606602 +/- 2.83e-8] < 4.061: True
+(4) 2*sqrt2 = [2.828427125 +/- 2.54e-10] < 2.8285: True

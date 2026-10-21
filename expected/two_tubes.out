@@ -1,0 +1,35 @@
+(1) random configurations
+  494 nonempty pairs: max rel |slicing - qhull| = 7.73e-04;  max vol*sin(th) = 0.969930
+(2) Monte-Carlo cross-check of qhull volumes
+  qhull 1.10257  MC 1.09826 +- 0.01102  sin 0.827  inside-pts-near-cube-edge 0
+  qhull 0.85395  MC 0.83589 +- 0.00868  sin 0.961  inside-pts-near-cube-edge 0
+  qhull 0.65394  MC 0.64237 +- 0.00761  sin 0.961  inside-pts-near-cube-edge 0
+  qhull 1.39040  MC 1.39895 +- 0.01724  sin 0.548  inside-pts-near-cube-edge 0
+(3) 12-parameter Nelder-Mead maximisation of vol*sin(theta)
+  start  0: max vol*sin = 1.00000000
+  start  1: max vol*sin = 1.00000000
+  start  2: max vol*sin = 1.00000000
+  start  3: max vol*sin = 0.00000000
+  start  4: max vol*sin = 1.00000000
+  start  5: max vol*sin = 0.00000000
+  start  6: max vol*sin = 0.00000000
+  start  7: max vol*sin = 1.00000000
+  start  8: max vol*sin = 0.94280904
+  start  9: max vol*sin = 0.00000000
+  start 10: max vol*sin = 1.00000000
+  start 11: max vol*sin = 0.94280904
+  start 12: max vol*sin = 0.00000000
+  start 13: max vol*sin = 1.00000000
+  start 14: max vol*sin = 0.94280904
+  start 15: max vol*sin = 0.94280904
+  start 16: max vol*sin = 0.94280904
+  start 17: max vol*sin = 0.94280904
+  start 18: max vol*sin = 0.94280904
+  start 19: max vol*sin = 1.00000000
+  start 20: max vol*sin = 1.00000000
+  start 21: max vol*sin = 1.00000000
+  start 22: max vol*sin = 1.00000000
+  start 23: max vol*sin = 1.00000000
+  BEST over starts: 0.9999999998
+(4) reduced grid: e=x, e2=(cos th, sin th, 0), rolls a, a2, n-offset d
+  grid max vol*sin = 1.00000000 at (th, roll, roll2, d) = [0.2 0.  0.  0. ]

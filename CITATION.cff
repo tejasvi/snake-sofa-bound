@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these Lean files or scripts, please cite the paper."
+title: "An upper bound of 2√2 for the three-dimensional sofa problem in a snake-shaped corridor"
+authors:
+  - family-names: Tomar
+    given-names: Tejasvi Singh
+    orcid: "https://orcid.org/0000-0003-4668-3639"
+license: Apache-2.0
+repository-code: "https://github.com/tejasvi/snake-sofa-bound-v2"
+doi: 10.5281/zenodo.23528556
+preferred-citation:
+  type: article
+  title: "An upper bound of 2√2 for the three-dimensional sofa problem in a snake-shaped corridor"
+  authors:
+    - family-names: Tomar
+      given-names: Tejasvi Singh
+      orcid: "https://orcid.org/0000-0003-4668-3639"
+  doi: 10.5281/zenodo.23528555
+  year: 2026

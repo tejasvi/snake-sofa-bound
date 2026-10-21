@@ -1,0 +1,6 @@
+qhull 1.69603   MC 1.69429 +- 0.00149   (sin th 0.539, inside samples in outer shell: 0)
+qhull 0.24382   MC 0.24403 +- 0.00016   (sin th 0.988, inside samples in outer shell: 0)
+qhull 0.29666   MC 0.29727 +- 0.00030   (sin th 0.682, inside samples in outer shell: 0)
+qhull 1.09385   MC 1.09457 +- 0.00071   (sin th 0.840, inside samples in outer shell: 0)
+qhull 0.31742   MC 0.31753 +- 0.00022   (sin th 0.980, inside samples in outer shell: 0)
+qhull 0.74943   MC 0.74883 +- 0.00044   (sin th 0.965, inside samples in outer shell: 0)

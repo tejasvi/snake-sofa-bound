@@ -1,0 +1,14 @@
+plateau chord = 1/cos(p)
+ramp chord    = (-2*b + sqrt(2)*sin(p + pi/4))/sin(2*p)
+ramp at b1 - plateau = 0
+ramp at b2           = 0
+plateau lo1 hi1 lo2 hi2 at p=pi/7: [-0.611192, 0.498724, -0.909904, 1.394861]
+ramp lo1 hi1 lo2 hi2 at p=pi/7: [-0.7719, 0.338016, -0.216942, 2.087823]
+area = 1
+int l^2 - claim = 0
+numerator of 1-f (times (1+t^2)^2), t=tan(p/2): 2*t*(3*t**3 + t**2 - 3*t + 1)/3
+check num == (2t/3)*cubic: True
+real roots of cubic: [-1.29989592966864]
+cubic at 0 and at tan(pi/8)=sqrt2-1: 1 -14 + 10*sqrt(2)
+f(pi/4) = 2*sqrt(2)/3 = 0.942809041582063
+numeric: max |int l^2 - f(folded p)|, |area-1| over 400 angles = 5.00e-05;  max int l^2 = 1.000050
