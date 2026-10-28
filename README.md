@@ -2,7 +2,7 @@
 
 This repository accompanies the paper *An upper bound of 2√2 for the three-dimensional sofa problem in a
 snake-shaped corridor* by Tejasvi Singh Tomar. It contains a Lean 4 formalization of the main results
-(`lean/`) and optional numerical checks (`scripts/`, `explore/`).
+(`lean/`), optional numerical checks (`scripts/`, `explore/`) and the LaTeX source of the paper (`paper/main.tex`).
 
 ## What the paper proves
 
@@ -12,8 +12,8 @@ x–y and y–z planes. This is Problem 6.64 of Georgiev, Gómez-Serrano, Tao an
 whose code uses M = 4.
 
 - **Theorem 1.1.** For every M > 2 + √2, every compact connected body that can be moved through K_M by a
-  continuous family of rigid motions has volume at most 2√2 = 2.8284… . Remark 2.3 of the paper explains
-  why this also covers bounded connected sets, stronger notions of passage and the corridor with one turn.
+  continuous family of rigid motions has volume at most 2√2 = 2.8284… . Remark 2.3 and Corollary 4.6 of
+  the paper extend this to bounded connected sets, stronger notions of passage and the corridor with one turn.
 - **Lemma 3.3.** Two tubes of unit-square cross-section whose axes make an angle θ meet in volume at most
   1/sin θ. The bound is sharp.
 - **Corollary 5.1.** For √2 < M ≤ 2 + √2, the volume is at most
@@ -24,18 +24,18 @@ whose code uses M = 4.
 The proofs in Sections 2–6 of the paper are analytic and use no computer. The main results are also proved in
 Lean 4 with Mathlib (next section). The scripts after that are optional numerical sanity checks of the lemmas and of the
 chain of inequalities in the proof. No step of the paper depends on them.
-The numerical observations in Remark 6.3 of the paper (relaxations with several times) come from the
-exploratory code in `explore/`, described at the end of this file.
+The numerical observations in Section 7 of the paper (relaxations with several times, as in Remark 6.3) come from
+the exploratory code in `explore/`, described at the end of this file.
 
 ## Lean formalization (`lean/`)
 
 The directory `lean/` is a Lean 4 project for Lean `v4.35.0-rc3` (file `lean-toolchain`) and Mathlib at tag
-`v4.35.0-rc3`, commit `c55e6e786f49` (file `lake-manifest.json`). Every theorem below depends only on the
-standard axioms `propext`, `Classical.choice` and `Quot.sound`. The files contain no `sorry`, no further axioms
-and no `native_decide`. In a separate check, the proofs were rebuilt from a clean copy of the sources on another
-machine, and `leanchecker` and the kernels nanoda and lean4lean accepted the exported proofs (Section 7 of the
-paper). The check used the `leanchecker` of the `v4.35.0-rc3` toolchain, nanoda 0.4.17, and lean4lean built against
-Lean 4.35.0-nightly-2026-09-06 and run on the export.
+`v4.35.0-rc3`, commit `c55e6e786f49` (file `lake-manifest.json`). Every theorem below depends only on the standard
+axioms `propext`, `Classical.choice` and `Quot.sound`. The files contain no `sorry`, no further axioms and no
+`native_decide`. In a separate check, the proofs were rebuilt from a clean copy of the sources on another machine,
+and `leanchecker` and the kernels nanoda and lean4lean accepted the exported proofs. The check used the
+`leanchecker` of the `v4.35.0-rc3` toolchain, nanoda 0.4.17, and lean4lean built against Lean
+4.35.0-nightly-2026-09-06 and run on the export.
 
 | Theorem | Statement | Paper |
 |---|---|---|
@@ -50,7 +50,7 @@ Lean 4.35.0-nightly-2026-09-06 and run on the export.
 | `Sofa3D.main_ge` | The bound of Theorem 1.1 for every M ≥ 2 + √2. | Remark 5.2(a) |
 | `Sofa3D.relax` | For 0 < s < 1 and c ≥ 1 + (1 + s)/√(1 − s²), the largest volume of T ∩ (S_X ∪ S_Y(c)) over tubes T with \|w·e_y\| = s is 1/s + 1/√(1 − s²) (bound and a tube attaining it). | Proposition 6.1 |
 | `Sofa3D.relax_value` | For 0 < s < 1, 1/s + 1/√(1 − s²) ≥ 2√2, with equality if and only if s = 1/√2. | Proposition 6.1 |
-| `Sofa3D.one_le_Vstar` | V\*(K_M) ≥ 1 for M ≥ 0: the unit cube passes by translations, so the definitions admit passages. | Section 7 |
+| `Sofa3D.one_le_Vstar` | V\*(K_M) ≥ 1 for M ≥ 0: the unit cube passes by translations, so the definitions admit passages. | Appendix A |
 
 The definitions of the corridor, bodies, passages and V\* are in `Sofa3D/Defs.lean`, and the statements of the
 table are in `Sofa3D/Statements.lean` or next to their proofs. The chord function (`Chord.lean`), the windows W_c
@@ -62,8 +62,8 @@ preserve volume; the tubes X and Y), `Crossing` (facts about the corridor, and t
 Theorem 1.1 and its extension in Remark 2.3, Corollary 5.1, Remark 5.2(a)), `Extras` (the last sentence of Proposition 6.1, bounded sets),
 `Relax` (Proposition 6.1) and `NonVacuity`. Lemmas 4.1 and 4.2 and the inclusions K_M ∩ {y ≤ c} ⊆ S_X ∪ S_Y(c) ⊆ X ∪ Y of
 (2.1) are proved only as steps of the proof of Proposition 4.5. Not formalized: the equality cases of Lemmas 3.2 and 3.3, Remarks 3.4, 4.4,
-5.2(b)–(d) and 6.2–6.4, the paragraph after Proposition 6.1, and the other statements of Remark 2.3 (passages
-through the interior of K_M, the end positions of the code of Georgiev et al., the corridor with one turn).
+5.2(b)–(c) (with Table 1) and 6.2–6.4, the paragraph after Proposition 6.1, the other statements of Remark 2.3 (passages
+through the interior of K_M, the end positions of the code of Georgiev et al.) and Corollary 4.6 (the corridor with one turn).
 
 To check the proofs, install elan (the Lean toolchain manager) and run, from `lean/`:
 
@@ -134,11 +134,11 @@ python3 -I scripts/check_constants.py
 
 Compare the output with the files in `expected/`.
 
-## Exploratory code behind Remark 6.3 (`explore/`)
+## Exploratory code behind Section 7 (`explore/`)
 
 The directory `explore/` holds exploratory floating-point code. It is not rigorous, and the paper uses its
-output only for the numerical observations of Remark 6.3, where the values are stated as the best local
-maxima found numerically. The searches use Nelder–Mead from random starting points with fixed seeds.
+output only for the numerical observation in Section 7, where the largest value found is stated as the best
+local maximum found numerically. The searches use Nelder–Mead from random starting points with fixed seeds.
 
 | Script | What it does | Run time on one core |
 |---|---|---|
@@ -158,5 +158,5 @@ Expected outputs: `expected/explore_scan3.out`, `expected/explore_multi_ev2_s1.o
 
 ## License and citation
 
-The Lean files and the scripts are released under the Apache License 2.0 (see `LICENSE`). Please cite the paper; see
-`CITATION.cff`.
+The Lean files and the scripts are released under the Apache License 2.0 (see `LICENSE`), and the LaTeX source of the paper
+under CC BY 4.0. Please cite the paper; see `CITATION.cff`.
